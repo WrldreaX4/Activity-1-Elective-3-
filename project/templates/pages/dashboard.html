@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load statistics %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block body %}
+  <div class="container-fluid px-4">
+    <div class="row justify-content-center my-4 w-100">
+      <div class="col-12 p-2">
+        <div class="row g-3 justify-content-center"> 
+          {% for item in data %}
+            <div class="col-12 col-md-4"> 
+              <div class="bg-white shadow p-4 rounded text-center">
+                <h2 class="h5 fw-bold mb-2">{{ item.title }}</h2>
+                <p class="display-6 fw-bold text-dark">{{ item.count|format_count }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

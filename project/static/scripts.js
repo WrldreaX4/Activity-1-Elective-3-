@@ -1,14 +1,13 @@
-'use strict';
-
+console.log("shabu");
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
 }
 
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const overlay = document.querySelector("[data-overlay]");
+const navbar = document.querySelector("navbar");
+const navTogglers = document.querySelectorAll("navb");
+const overlay = document.querySelector("overlay");
 
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
@@ -18,7 +17,7 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-const header = document.querySelector("[data-header]");
+const header = document.querySelector("data-header");
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > 100) {
